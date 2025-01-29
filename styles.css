@@ -32,9 +32,28 @@
     text-decoration: none;
     color: black;
   }
-
-  li:hover{
+  li:hover, li a:hover{
     background: blue;
-    color: white !important;
+    color: white;
   }
 
+  /* Pseudo Elements */
+
+  nav::before{
+    content:'This is a pseudo element.  It does not exist in the html or the Document Object Model.';
+    padding:10px;
+    color: white;
+    display: block;
+    height: 50px;
+    width:  200px;
+    border-radius:12px;
+    background: black;
+  }
+
+  li::before{
+    content: '> ';
+  }
+
+  li::after{
+    content: ' <';
+  }
